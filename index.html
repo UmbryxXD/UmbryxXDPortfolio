@@ -61,6 +61,16 @@ h1 span{background:linear-gradient(100deg,#d8ccff,var(--p) 40%,var(--b));-webkit
 .dockf{position:relative;width:130px;aspect-ratio:1/1.05;overflow:hidden;margin-left:auto;cursor:pointer}
 .dockf .gfig{position:absolute;left:0;top:0;width:100%;height:auto;transform:none}
 .dockf .gfig img{filter:none}
+.pj{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:16px;perspective:900px}
+.pc{gap:14px;min-height:320px}.pc.feat{border-color:#a78bfa66;background:linear-gradient(150deg,#2a1853f0,#0c0a17f0)}
+.ph{display:flex;gap:14px;align-items:center}.ph .sym{margin:0}.ph h3{margin:0}
+.bd{font-size:11px;letter-spacing:.06em;color:var(--muted)}.bd.live{color:#86efac}
+.pc p{flex:0 0 auto}
+.ft{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:auto}
+.ft li{font-size:13px;color:#e0daf7;display:flex;gap:8px;align-items:center}.ft li:before{content:"✓";color:var(--p);font-weight:700}
+.lock{font-size:12px;color:var(--muted);border:1px dashed #ffffff2a;border-radius:10px;padding:9px 14px;text-align:center}
+.card a.btn{color:#fff;font-weight:400}.card a.btn:hover{text-decoration:none}.pc .btn{justify-content:center}
+@media(max-width:820px){.pj{grid-template-columns:1fr}}
 .hop{animation:hop .45s ease-out!important}
 @keyframes breathe{50%{transform:scaleY(1.012)}}@keyframes talk{to{transform:translateY(-5px) scale(1.012,.994)}}@keyframes hop{40%{transform:translateY(-18px)}}
 .dx{position:absolute;top:-9px;right:-6px;width:24px;height:24px;border-radius:50%;background:#1a1530;border:1px solid var(--line);font-size:11px;z-index:2}
@@ -128,11 +138,26 @@ footer{padding:28px 0 90px;color:#77758e;font-size:11px;display:flex;justify-con
 </div></section>
 
 <section class="content" id="projects"><div class="wrap">
-  <div class="top rv"><div><div class="kick">03 / Projects</div><h2>Things I’m building.</h2></div><p>My current projects and experiments. Personal builds, not claims of finished commercial products.</p></div>
-  <div class="pg rv">
-    <article class="card project"><div class="sym">✦</div><h3>Chatbot</h3><p>An AI-powered Discord voice assistant that listens, talks back and helps out in voice channels.</p><span class="st">AI · Discord · Voice</span></article>
-    <article class="card project"><div class="sym">⌘</div><h3>Jarvis</h3><p>An AI assistant project exploring voice interaction, automation and useful everyday workflows.</p><span class="st">AI · Personal assistant</span></article>
-    <article class="card project"><div class="sym">⛨</div><h3>Moderation bots</h3><p>Discord moderation bot projects that keep servers tidy and safe, built on solid backend logic.</p><span class="st">Bots · Backend</span></article>
+  <div class="top rv"><div><div class="kick">03 / Projects</div><h2>Things I’m building.</h2></div><p>Zenvyx is live and ready to add to your server. The other two are private builds.</p></div>
+  <div class="pj rv">
+    <article class="card project pc feat">
+      <div class="ph"><div class="sym">✦</div><div><h3>Zenvyx</h3><span class="bd live">● Public · Discord bot</span></div></div>
+      <p>An all-in-one Discord bot that handles the serious and the fun parts of running a server.</p>
+      <ul class="ft"><li>Moderation</li><li>Music</li><li>Fun commands</li><li>Server management</li></ul>
+      <a class="btn primary" href="https://discord.com/oauth2/authorize?client_id=1557282550869663756" target="_blank" rel="noopener">Add Zenvyx to Discord ↗</a>
+    </article>
+    <article class="card project pc">
+      <div class="ph"><div class="sym">◉</div><div><h3>Zenvyx AI</h3><span class="bd">Private · AI assistant</span></div></div>
+      <p>An AI chatbot you can also talk to out loud, built for Discord.</p>
+      <ul class="ft"><li>AI chatbot</li><li>Voice assistant</li></ul>
+      <span class="lock">🔒 Private project</span>
+    </article>
+    <article class="card project pc">
+      <div class="ph"><div class="sym">⌘</div><div><h3>Jarvis</h3><span class="bd">Private · PC assistant</span></div></div>
+      <p>A voice assistant for the computer that chats, automates tasks and controls the PC.</p>
+      <ul class="ft"><li>Chatbot</li><li>PC automation</li><li>PC control</li><li>Voice assistant</li></ul>
+      <span class="lock">🔒 Private project</span>
+    </article>
   </div>
 </div></section>
 
@@ -148,7 +173,7 @@ footer{padding:28px 0 90px;color:#77758e;font-size:11px;display:flex;justify-con
 
 <section class="content" id="contact"><div class="wrap"><div class="contact rv">
   <div><div class="kick">05 / Next chapter</div><h2>Have an idea? Let’s build something.</h2><p>I’m always learning, experimenting and adding new things to my digital space.</p></div>
-  <div class="cl"><a class="btn primary" href="https://discord.com/users/1245649269705150464">Discord</a><a class="btn" href="https://github.com/UmbryxXD">GitHub</a><a class="btn" href="#home">Back to top ↑</a></div>
+  <div class="cl"><a class="btn primary" href="#">Discord</a><a class="btn" href="#">GitHub</a><a class="btn" href="#home">Back to top ↑</a></div>
 </div></div></section>
 <footer class="wrap"><span>© <span id="year"></span> UMBRYX</span><span>Made with curiosity and a little purple glow.</span></footer>
 
@@ -212,7 +237,7 @@ const CH=[
  {k:'Hello',to:'#home',p:'welcome',t:"Hi hi! Welcome to Umbryx’s corner of the internet. I’m the guide, so tap Next and I’ll show you around."},
  {k:'About',to:'#about',p:'talk',t:"Umbryx is chill and a little introverted, and loves grinding, leveling up and getting stronger. Purple and black, always."},
  {k:'Skills',to:'#skills',p:'think',t:"Python, AI models and assistants, Discord bots, plus backend stuff like databases and APIs. Still learning, still leveling up."},
- {k:'Projects',to:'#projects',p:'point',t:"A voice assistant chatbot for Discord, Jarvis the AI assistant, and moderation bots to keep servers tidy. Take a look!"},
+ {k:'Projects',to:'#projects',p:'point',t:"Zenvyx is an all-in-one Discord bot: moderation, music, fun and server management, and you can add it right here. Zenvyx AI is a voice chatbot, and Jarvis automates and controls a PC. Those two are private."},
  {k:'Goals',to:'#goals',p:'talk',t:"Next up: better AI model knowledge, more Discord bot skills, and stronger backend and API chops. Long term, Umbryx is eyeing software development or dermatology."},
  {k:'Fun fact',to:'#about',p:'point',t:"Off the clock it’s Blox Fruits: grind, level up, repeat. And math? Let’s not talk about math."},
  {k:'Contact',to:'#contact',p:'welcome',t:"Got an idea or a bot to build? Say hi below!"}];
